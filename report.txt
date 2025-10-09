@@ -1,0 +1,26 @@
+3 test cases failed. Gcov shows that there's an unreachable line.
+
+[----] schemeValidatorTests.c:24: Assertion Failed
+[----]   
+[----]   The expression (expected) == (actual) is false.
+[----]   
+[----] schemeValidatorTests.c:24: Assertion Failed
+[----]   
+[----]   The expression (expected) == (actual) is false.
+[----]   
+[----] schemeValidatorTests.c:24: Assertion Failed
+[----]   
+[----]   The expression (expected) == (actual) is false.
+[----]   
+[FAIL] coverage::test01: (0.00s)
+[FAIL] coverage::test05: (0.00s)
+[FAIL] coverage::test06: (0.00s)
+[====] Synthesis: Tested: 9 | Passing: 6 | Failing: 3 | Crashing: 0 
+
+File 'schemeValidator.c'
+Lines executed:95.45% of 22
+Creating 'schemeValidator.c.gcov'
+
+Lines executed:95.45% of 22
+
+    #####:   11:      else if (!isSpecial(scheme[i])) result = -1;
