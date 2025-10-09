@@ -1,0 +1,29 @@
+        -:    0:Source:schemeValidator.c
+        -:    0:Graph:schemeValidator.gcno
+        -:    0:Data:schemeValidator.gcda
+        -:    0:Runs:10
+        -:    1:#include "schemeValidator.h"
+        -:    2:
+       36:    3:bool isAlpha(char c) {
+       36:    4:    return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z');
+        -:    5:}
+        -:    6:
+        6:    7:bool isSpecial(char c) {
+        6:    8:    return (c == '+' || c == '-' || c == '.');
+        -:    9:}
+        -:   10:
+        7:   11:bool isDigit(char c) {
+        7:   12:    return ('0' <= c && c <= '9');
+        -:   13:}
+        -:   14:
+        9:   15:int schemeValidator(char scheme[]) {
+        9:   16:    if (!isAlpha(scheme[0]))
+        1:   17:        return -1;
+        8:   18:    int result = 0; 
+       33:   19:    for (int i = 1; scheme[i] != '\0'; i++) {
+       27:   20:        if (!(isAlpha(scheme[i]) || isDigit(scheme[i]) || isSpecial(scheme[i]))) return -1;
+       25:   21:        if ('A' <= scheme[i] && scheme[i] <= 'Z') result = 1;
+        -:   22:    }
+        6:   23:  return result;
+        -:   24:}
+        -:   25:
