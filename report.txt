@@ -2,6 +2,12 @@
 
 [====] Synthesis: Tested: 9 | Passing: 9 | Failing: 0 | Crashing: 0
 
+File 'schemeValidator.c'
+Lines executed:100.00% of 14
+Creating 'schemeValidator.c.gcov'
+
+Lines executed:100.00% of 14
+
 
 Implementation is too buggy and is rewritten. Now all tests are passing.
 
