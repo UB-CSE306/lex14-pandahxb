@@ -1,3 +1,8 @@
+1 more test to validate digit
+
+[====] Synthesis: Tested: 9 | Passing: 9 | Failing: 0 | Crashing: 0
+
+
 Implementation is too buggy and is rewritten. Now all tests are passing.
 
 [====] Synthesis: Tested: 8 | Passing: 8 | Failing: 0 | Crashing: 0
