@@ -1,36 +1,25 @@
 #include "schemeValidator.h"
 
-int schemeValidator(char scheme[]) {
-  int result = -1;
-  if (isAlpha(scheme[1])) {
-    result = 0; 
-    int i=2;
-    while (scheme[i++] != '\0') {
-      if (!isAlpha(scheme[i])) result = -1;
-      else if (!isDigit(scheme[i])) result = -1;
-      else if (!isSpecial(scheme[i])) result = -1;
-    }
-  }
-  if ('A' < scheme[1] && scheme[1] < 'Z') {
-    result = 1;
-  }
-  return result;
-}
-
 bool isAlpha(char c) {
-  return 'a' < c && c < 'z';
+    return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z');
 }
 
 bool isSpecial(char c) {
-  bool result = false;
-  if (c == '+') result = true;
-  else if (c == '-') result = true;
-  else result = true;
-  return result;
+    return (c == '+' || c == '-' || c == '.');
 }
 
 bool isDigit(char c) {
-  return 0 < c && c < 9;
+    return ('0' <= c && c <= '9');
 }
 
+int schemeValidator(char scheme[]) {
+    if (!isAlpha(scheme[0]))
+        return -1;
+    int result = 0; 
+    for (int i = 1; scheme[i] != '\0'; i++) {
+        if (!(isAlpha(scheme[i]) || isDigit(scheme[i]) || isSpecial(scheme[i]))) return -1;
+        if ('A' <= scheme[i] && scheme[i] <= 'Z') result = 1;
+    }
+  return result;
+}
 

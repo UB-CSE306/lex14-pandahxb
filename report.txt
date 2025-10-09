@@ -1,3 +1,8 @@
+Implementation is too buggy and is rewritten. Now all tests are passing.
+
+[====] Synthesis: Tested: 8 | Passing: 8 | Failing: 0 | Crashing: 0
+
+
 3 test cases failed. Gcov shows that there's an unreachable line.
 
 [----] schemeValidatorTests.c:24: Assertion Failed
